@@ -10,7 +10,7 @@ import UIKit
 typealias ContactsTableViewCellConfigurator = TableCellConfigurator<ContactsTableViewCell, User>
 class ContactsTableViewCell: UITableViewCell, ConfigurableCell {
     typealias DataType = User
-    
+    var viewModel = ViewModel()
     private let profileImage : UIImageView = {
         let profileImage = UIImageView()
         profileImage.layer.cornerRadius = 24
@@ -18,7 +18,6 @@ class ContactsTableViewCell: UITableViewCell, ConfigurableCell {
         profileImage.layer.masksToBounds = false
         profileImage.clipsToBounds = true
         return profileImage
-        
     }()
     
     private let statusView : UIView = {
@@ -29,7 +28,6 @@ class ContactsTableViewCell: UITableViewCell, ConfigurableCell {
         statusView.layer.borderColor = CGColor(red: 1, green: 1, blue: 1, alpha: 1)
         statusView.layer.masksToBounds = false
         statusView.clipsToBounds = true
-        
         return statusView
     }()
     
@@ -55,9 +53,24 @@ class ContactsTableViewCell: UITableViewCell, ConfigurableCell {
         return stack
     }()
     
+    private let addButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("ADD".locolized(), for: .normal)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 13)
+        button.setImage(UIImage(systemName: "plus.circle"), for: .normal)
+        button.setTitleColor(UIColor(red: 0, green: 122/255, blue: 1, alpha: 1), for: .normal)
+        button.imageEdgeInsets.left = -2
+        button.contentEdgeInsets = UIEdgeInsets(top: 4, left: 12, bottom: 4, right: 12)
+        button.layer.borderColor = CGColor(red: 0, green: 122/255, blue: 1, alpha: 1)
+        button.layer.cornerRadius = 14
+        button.layer.borderWidth = 1
+        return button
+    }()
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: .default, reuseIdentifier: reuseIdentifier)
-        contentView.addSubviews(profileImage, stackLabel, statusView)
+        contentView.addSubviews(profileImage, stackLabel, statusView, addButton)
+        addButton.addTarget(nil, action: #selector(viewModel.addButtonPressed), for: .touchUpInside)
         setupConstraints()
     }
 
@@ -76,6 +89,14 @@ class ContactsTableViewCell: UITableViewCell, ConfigurableCell {
         }
     }
     
+    func bindViewModel() {
+        viewModel.color.bind { color in
+            DispatchQueue.main.async {
+                self.addButton.backgroundColor = color
+            }
+        }
+    }
+    
     private func setupConstraints() {
         profileImage.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(12)
@@ -91,6 +112,10 @@ class ContactsTableViewCell: UITableViewCell, ConfigurableCell {
         stackLabel.snp.makeConstraints { make in
             make.centerY.equalToSuperview()
             make.leading.equalTo(profileImage.snp.trailing).offset(12)
+        }
+        addButton.snp.makeConstraints { make in
+            make.centerY.equalToSuperview()
+            make.trailing.equalToSuperview()
         }
     }
     

@@ -28,6 +28,8 @@
 		6DADDE64280F8CFA00C39F45 /* TableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DADDE63280F8CFA00C39F45 /* TableViewModel.swift */; };
 		6DBD64922811DF800041C3A6 /* ByPhoneNumberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBD64912811DF800041C3A6 /* ByPhoneNumberCell.swift */; };
 		6DBD64942811EA560041C3A6 /* ContactsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBD64932811EA560041C3A6 /* ContactsTableViewCell.swift */; };
+		6DF330AE281331380056F52C /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF330AD281331380056F52C /* ViewModel.swift */; };
+		6DF330B1281331590056F52C /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF330B0281331590056F52C /* Dynamic.swift */; };
 		B56E01F9BA96BB42092F9945 /* Pods_Lab3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA551CE81BDB69D40E0366F /* Pods_Lab3.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +61,8 @@
 		6DADDE63280F8CFA00C39F45 /* TableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewModel.swift; sourceTree = "<group>"; };
 		6DBD64912811DF800041C3A6 /* ByPhoneNumberCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ByPhoneNumberCell.swift; sourceTree = "<group>"; };
 		6DBD64932811EA560041C3A6 /* ContactsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTableViewCell.swift; sourceTree = "<group>"; };
+		6DF330AD281331380056F52C /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		6DF330B0281331590056F52C /* Dynamic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
 		DEA551CE81BDB69D40E0366F /* Pods_Lab3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lab3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -95,6 +99,7 @@
 		6D187083280DB6C5001BFC16 /* Lab3 */ = {
 			isa = PBXGroup;
 			children = (
+				6DF330AF281331460056F52C /* Bindings */,
 				6D18709A280DB76B001BFC16 /* ViewModel */,
 				6D187099280DB760001BFC16 /* View */,
 				6D187098280DB75A001BFC16 /* Model */,
@@ -130,6 +135,7 @@
 		6D18709A280DB76B001BFC16 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				6DF330AD281331380056F52C /* ViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -191,7 +197,7 @@
 		6DADDE5A280F47B900C39F45 /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
-				6DBD649528121D440041C3A6 /* AddNewCOntactsCells */,
+				6DBD649528121D440041C3A6 /* Cells */,
 				6DBD64932811EA560041C3A6 /* ContactsTableViewCell.swift */,
 				6DADDE5F280F882B00C39F45 /* CellConfigurator.swift */,
 				6DADDE63280F8CFA00C39F45 /* TableViewModel.swift */,
@@ -199,14 +205,22 @@
 			path = TableViewCells;
 			sourceTree = "<group>";
 		};
-		6DBD649528121D440041C3A6 /* AddNewCOntactsCells */ = {
+		6DBD649528121D440041C3A6 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
 				6DADDE5B280F47F500C39F45 /* FromContactsTableViewCell.swift */,
 				6DADDE5D280F857500C39F45 /* ByUserNameTableViewCell.swift */,
 				6DBD64912811DF800041C3A6 /* ByPhoneNumberCell.swift */,
 			);
-			path = AddNewCOntactsCells;
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		6DF330AF281331460056F52C /* Bindings */ = {
+			isa = PBXGroup;
+			children = (
+				6DF330B0281331590056F52C /* Dynamic.swift */,
+			);
+			path = Bindings;
 			sourceTree = "<group>";
 		};
 		CBD709D239FF5FED6F29A887 /* Pods */ = {
@@ -353,6 +367,8 @@
 				6D4521A4280E42B300FD5F59 /* AddNewFriendViewController.swift in Sources */,
 				6D1870A9280DF859001BFC16 /* User.swift in Sources */,
 				6DBD64942811EA560041C3A6 /* ContactsTableViewCell.swift in Sources */,
+				6DF330AE281331380056F52C /* ViewModel.swift in Sources */,
+				6DF330B1281331590056F52C /* Dynamic.swift in Sources */,
 				6D187085280DB6C5001BFC16 /* AppDelegate.swift in Sources */,
 				6D18709E280DB976001BFC16 /* MyFeedViewController.swift in Sources */,
 				6D1870AE280DFD38001BFC16 /* UserInfoCollectionViewCell.swift in Sources */,
