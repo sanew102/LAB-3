@@ -13,9 +13,27 @@
 		6D18708C280DB6C5001BFC16 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D18708A280DB6C5001BFC16 /* Main.storyboard */; };
 		6D18708E280DB6CD001BFC16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D18708D280DB6CD001BFC16 /* Assets.xcassets */; };
 		6D187091280DB6CD001BFC16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D18708F280DB6CD001BFC16 /* LaunchScreen.storyboard */; };
+		6D18709E280DB976001BFC16 /* MyFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D18709D280DB976001BFC16 /* MyFeedViewController.swift */; };
+		6D1870A0280DB9E2001BFC16 /* MyFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D18709F280DB9E2001BFC16 /* MyFriendsViewController.swift */; };
+		6D1870A2280DBAA5001BFC16 /* MyPinsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D1870A1280DBAA5001BFC16 /* MyPinsViewController.swift */; };
+		6D1870A4280DBAB2001BFC16 /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D1870A3280DBAB2001BFC16 /* MyProfileViewController.swift */; };
+		6D1870A9280DF859001BFC16 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D1870A8280DF859001BFC16 /* User.swift */; };
+		6D1870AE280DFD38001BFC16 /* UserInfoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D1870AD280DFD38001BFC16 /* UserInfoCollectionViewCell.swift */; };
+		6D4521A4280E42B300FD5F59 /* AddNewFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4521A3280E42B300FD5F59 /* AddNewFriendViewController.swift */; };
+		6DADDE4E280F2F9600C39F45 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DADDE4D280F2F9600C39F45 /* Extensions.swift */; };
+		6DADDE52280F30F600C39F45 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6DADDE54280F30F600C39F45 /* Localizable.strings */; };
+		6DADDE5C280F47F500C39F45 /* FromContactsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DADDE5B280F47F500C39F45 /* FromContactsTableViewCell.swift */; };
+		6DADDE5E280F857500C39F45 /* ByUserNameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DADDE5D280F857500C39F45 /* ByUserNameTableViewCell.swift */; };
+		6DADDE60280F882B00C39F45 /* CellConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DADDE5F280F882B00C39F45 /* CellConfigurator.swift */; };
+		6DADDE64280F8CFA00C39F45 /* TableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DADDE63280F8CFA00C39F45 /* TableViewModel.swift */; };
+		6DBD64922811DF800041C3A6 /* ByPhoneNumberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBD64912811DF800041C3A6 /* ByPhoneNumberCell.swift */; };
+		6DBD64942811EA560041C3A6 /* ContactsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBD64932811EA560041C3A6 /* ContactsTableViewCell.swift */; };
+		B56E01F9BA96BB42092F9945 /* Pods_Lab3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA551CE81BDB69D40E0366F /* Pods_Lab3.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E3C5F08C57A91E19493369E /* Pods-Lab3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lab3.debug.xcconfig"; path = "Target Support Files/Pods-Lab3/Pods-Lab3.debug.xcconfig"; sourceTree = "<group>"; };
+		2936446F852F6CB65BE9763F /* Pods-Lab3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lab3.release.xcconfig"; path = "Target Support Files/Pods-Lab3/Pods-Lab3.release.xcconfig"; sourceTree = "<group>"; };
 		6D187081280DB6C5001BFC16 /* Lab3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lab3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D187084280DB6C5001BFC16 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6D187086280DB6C5001BFC16 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +42,24 @@
 		6D18708D280DB6CD001BFC16 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6D187090280DB6CD001BFC16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6D187092280DB6CD001BFC16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6D18709D280DB976001BFC16 /* MyFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFeedViewController.swift; sourceTree = "<group>"; };
+		6D18709F280DB9E2001BFC16 /* MyFriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFriendsViewController.swift; sourceTree = "<group>"; };
+		6D1870A1280DBAA5001BFC16 /* MyPinsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPinsViewController.swift; sourceTree = "<group>"; };
+		6D1870A3280DBAB2001BFC16 /* MyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
+		6D1870A8280DF859001BFC16 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		6D1870AD280DFD38001BFC16 /* UserInfoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoCollectionViewCell.swift; sourceTree = "<group>"; };
+		6D4521A3280E42B300FD5F59 /* AddNewFriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewFriendViewController.swift; sourceTree = "<group>"; };
+		6DADDE4D280F2F9600C39F45 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		6DADDE4F280F308500C39F45 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
+		6DADDE53280F30F600C39F45 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		6DADDE55280F30F800C39F45 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		6DADDE5B280F47F500C39F45 /* FromContactsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FromContactsTableViewCell.swift; sourceTree = "<group>"; };
+		6DADDE5D280F857500C39F45 /* ByUserNameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ByUserNameTableViewCell.swift; sourceTree = "<group>"; };
+		6DADDE5F280F882B00C39F45 /* CellConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellConfigurator.swift; sourceTree = "<group>"; };
+		6DADDE63280F8CFA00C39F45 /* TableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewModel.swift; sourceTree = "<group>"; };
+		6DBD64912811DF800041C3A6 /* ByPhoneNumberCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ByPhoneNumberCell.swift; sourceTree = "<group>"; };
+		6DBD64932811EA560041C3A6 /* ContactsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTableViewCell.swift; sourceTree = "<group>"; };
+		DEA551CE81BDB69D40E0366F /* Pods_Lab3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lab3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B56E01F9BA96BB42092F9945 /* Pods_Lab3.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +79,8 @@
 			children = (
 				6D187083280DB6C5001BFC16 /* Lab3 */,
 				6D187082280DB6C5001BFC16 /* Products */,
+				CBD709D239FF5FED6F29A887 /* Pods */,
+				FC041523F0E023BC6AA4125C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +95,135 @@
 		6D187083280DB6C5001BFC16 /* Lab3 */ = {
 			isa = PBXGroup;
 			children = (
+				6D18709A280DB76B001BFC16 /* ViewModel */,
+				6D187099280DB760001BFC16 /* View */,
+				6D187098280DB75A001BFC16 /* Model */,
 				6D187084280DB6C5001BFC16 /* AppDelegate.swift */,
 				6D187086280DB6C5001BFC16 /* SceneDelegate.swift */,
-				6D187088280DB6C5001BFC16 /* ViewController.swift */,
 				6D18708A280DB6C5001BFC16 /* Main.storyboard */,
 				6D18708D280DB6CD001BFC16 /* Assets.xcassets */,
 				6D18708F280DB6CD001BFC16 /* LaunchScreen.storyboard */,
 				6D187092280DB6CD001BFC16 /* Info.plist */,
+				6DADDE4D280F2F9600C39F45 /* Extensions.swift */,
+				6DADDE54280F30F600C39F45 /* Localizable.strings */,
 			);
 			path = Lab3;
+			sourceTree = "<group>";
+		};
+		6D187098280DB75A001BFC16 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6D1870A8280DF859001BFC16 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6D187099280DB760001BFC16 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6D187088280DB6C5001BFC16 /* ViewController.swift */,
+				6D1870AB280DFA2A001BFC16 /* TabBarVIewControllers */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6D18709A280DB76B001BFC16 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		6D1870AB280DFA2A001BFC16 /* TabBarVIewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				6DADDE57280F477B00C39F45 /* MyProfile */,
+				6DADDE56280F477200C39F45 /* MyFeed */,
+				6DADDE58280F478800C39F45 /* MyPins */,
+				6DADDE59280F479A00C39F45 /* MyFriends */,
+			);
+			path = TabBarVIewControllers;
+			sourceTree = "<group>";
+		};
+		6D1870AC280DFA40001BFC16 /* CollectionVIewCells */ = {
+			isa = PBXGroup;
+			children = (
+				6D1870AD280DFD38001BFC16 /* UserInfoCollectionViewCell.swift */,
+			);
+			path = CollectionVIewCells;
+			sourceTree = "<group>";
+		};
+		6DADDE56280F477200C39F45 /* MyFeed */ = {
+			isa = PBXGroup;
+			children = (
+				6D18709D280DB976001BFC16 /* MyFeedViewController.swift */,
+			);
+			path = MyFeed;
+			sourceTree = "<group>";
+		};
+		6DADDE57280F477B00C39F45 /* MyProfile */ = {
+			isa = PBXGroup;
+			children = (
+				6D1870A3280DBAB2001BFC16 /* MyProfileViewController.swift */,
+			);
+			path = MyProfile;
+			sourceTree = "<group>";
+		};
+		6DADDE58280F478800C39F45 /* MyPins */ = {
+			isa = PBXGroup;
+			children = (
+				6D1870A1280DBAA5001BFC16 /* MyPinsViewController.swift */,
+			);
+			path = MyPins;
+			sourceTree = "<group>";
+		};
+		6DADDE59280F479A00C39F45 /* MyFriends */ = {
+			isa = PBXGroup;
+			children = (
+				6D18709F280DB9E2001BFC16 /* MyFriendsViewController.swift */,
+				6D4521A3280E42B300FD5F59 /* AddNewFriendViewController.swift */,
+				6D1870AC280DFA40001BFC16 /* CollectionVIewCells */,
+				6DADDE5A280F47B900C39F45 /* TableViewCells */,
+			);
+			path = MyFriends;
+			sourceTree = "<group>";
+		};
+		6DADDE5A280F47B900C39F45 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				6DBD649528121D440041C3A6 /* AddNewCOntactsCells */,
+				6DBD64932811EA560041C3A6 /* ContactsTableViewCell.swift */,
+				6DADDE5F280F882B00C39F45 /* CellConfigurator.swift */,
+				6DADDE63280F8CFA00C39F45 /* TableViewModel.swift */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		6DBD649528121D440041C3A6 /* AddNewCOntactsCells */ = {
+			isa = PBXGroup;
+			children = (
+				6DADDE5B280F47F500C39F45 /* FromContactsTableViewCell.swift */,
+				6DADDE5D280F857500C39F45 /* ByUserNameTableViewCell.swift */,
+				6DBD64912811DF800041C3A6 /* ByPhoneNumberCell.swift */,
+			);
+			path = AddNewCOntactsCells;
+			sourceTree = "<group>";
+		};
+		CBD709D239FF5FED6F29A887 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0E3C5F08C57A91E19493369E /* Pods-Lab3.debug.xcconfig */,
+				2936446F852F6CB65BE9763F /* Pods-Lab3.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FC041523F0E023BC6AA4125C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DEA551CE81BDB69D40E0366F /* Pods_Lab3.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +233,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6D187095280DB6CD001BFC16 /* Build configuration list for PBXNativeTarget "Lab3" */;
 			buildPhases = (
+				756FD3C553814C0EC59DB055 /* [CP] Check Pods Manifest.lock */,
 				6D18707D280DB6C5001BFC16 /* Sources */,
 				6D18707E280DB6C5001BFC16 /* Frameworks */,
 				6D18707F280DB6C5001BFC16 /* Resources */,
+				0C737BD14969A3E8C5D6B914 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -109,6 +270,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = 6D187078280DB6C5001BFC16;
 			productRefGroup = 6D187082280DB6C5001BFC16 /* Products */;
@@ -126,6 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D187091280DB6CD001BFC16 /* LaunchScreen.storyboard in Resources */,
+				6DADDE52280F30F600C39F45 /* Localizable.strings in Resources */,
 				6D18708E280DB6CD001BFC16 /* Assets.xcassets in Resources */,
 				6D18708C280DB6C5001BFC16 /* Main.storyboard in Resources */,
 			);
@@ -133,13 +296,69 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0C737BD14969A3E8C5D6B914 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Lab3/Pods-Lab3-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Lab3/Pods-Lab3-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Lab3/Pods-Lab3-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		756FD3C553814C0EC59DB055 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Lab3-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6D18707D280DB6C5001BFC16 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DBD64922811DF800041C3A6 /* ByPhoneNumberCell.swift in Sources */,
+				6DADDE5C280F47F500C39F45 /* FromContactsTableViewCell.swift in Sources */,
+				6D1870A0280DB9E2001BFC16 /* MyFriendsViewController.swift in Sources */,
 				6D187089280DB6C5001BFC16 /* ViewController.swift in Sources */,
+				6DADDE64280F8CFA00C39F45 /* TableViewModel.swift in Sources */,
+				6D1870A4280DBAB2001BFC16 /* MyProfileViewController.swift in Sources */,
+				6D1870A2280DBAA5001BFC16 /* MyPinsViewController.swift in Sources */,
+				6D4521A4280E42B300FD5F59 /* AddNewFriendViewController.swift in Sources */,
+				6D1870A9280DF859001BFC16 /* User.swift in Sources */,
+				6DBD64942811EA560041C3A6 /* ContactsTableViewCell.swift in Sources */,
 				6D187085280DB6C5001BFC16 /* AppDelegate.swift in Sources */,
+				6D18709E280DB976001BFC16 /* MyFeedViewController.swift in Sources */,
+				6D1870AE280DFD38001BFC16 /* UserInfoCollectionViewCell.swift in Sources */,
+				6DADDE5E280F857500C39F45 /* ByUserNameTableViewCell.swift in Sources */,
+				6DADDE4E280F2F9600C39F45 /* Extensions.swift in Sources */,
+				6DADDE60280F882B00C39F45 /* CellConfigurator.swift in Sources */,
 				6D187087280DB6C5001BFC16 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -151,6 +370,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				6D18708B280DB6C5001BFC16 /* Base */,
+				6DADDE4F280F308500C39F45 /* ru */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -163,6 +383,15 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		6DADDE54280F30F600C39F45 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6DADDE53280F30F600C39F45 /* en */,
+				6DADDE55280F30F800C39F45 /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -170,6 +399,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -230,6 +460,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -282,16 +513,17 @@
 		};
 		6D187096280DB6CD001BFC16 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E3C5F08C57A91E19493369E /* Pods-Lab3.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6KPXJJT2Z8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Lab3/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -309,16 +541,17 @@
 		};
 		6D187097280DB6CD001BFC16 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2936446F852F6CB65BE9763F /* Pods-Lab3.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6KPXJJT2Z8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Lab3/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
