@@ -20,7 +20,7 @@ class ByPhoneNumberCell: UITableViewCell, ConfigurableCell {
     
     private let title : UILabel = {
         let label = UILabel()
-        label.textColor = .systemBlue
+        label.textColor = UIColor().textLabelColor
         label.font = UIFont.systemFont(ofSize: 17)
         return label
     }()

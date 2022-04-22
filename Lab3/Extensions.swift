@@ -67,10 +67,10 @@ extension UIColor {
     var tabBarColor: UIColor {
         return UIColor { (trait) -> UIColor in
             switch trait.userInterfaceStyle {
-                case .dark:
-                    return UIColor(red: 34/255, green: 34/255, blue: 34/255, alpha: 0.92)
-                default:
-                    return UIColor(red: 247/255, green: 247/255, blue: 247/255, alpha: 0.8)
+            case .dark:
+                return UIColor(red: 34/255, green: 34/255, blue: 34/255, alpha: 0.92)
+            default:
+                return UIColor(red: 247/255, green: 247/255, blue: 247/255, alpha: 0.8)
             }
         }
     }
@@ -82,6 +82,17 @@ extension UIColor {
                 return .secondaryLabel
             default:
                 return .black
+            }
+        }
+    }
+    
+    var textLabelColor: UIColor {
+        return UIColor { (trait) -> UIColor in
+            switch trait.userInterfaceStyle {
+            case .dark:
+                return .white
+            default:
+                return .systemBlue
             }
         }
     }

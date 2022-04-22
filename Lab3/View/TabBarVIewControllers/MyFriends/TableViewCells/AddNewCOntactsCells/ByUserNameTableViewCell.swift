@@ -21,7 +21,7 @@ class ByUserNameTableViewCell: UITableViewCell, ConfigurableCell {
     
     private let title : UILabel = {
         let label = UILabel()
-        label.textColor = .systemBlue
+        label.textColor = UIColor().textLabelColor
         label.font = UIFont.systemFont(ofSize: 17)
         return label
     }()
@@ -55,14 +55,10 @@ class ByUserNameTableViewCell: UITableViewCell, ConfigurableCell {
             make.width.height.equalTo(17)
             make.centerY.equalToSuperview()
         }
-        
         stack.snp.makeConstraints { make in
             make.leading.trailing.equalToSuperview()
             make.top.equalToSuperview().offset(11)
             make.bottom.equalToSuperview().offset(-11)
-            
         }
-        
     }
-    
 }

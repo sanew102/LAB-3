@@ -13,44 +13,21 @@ class AddNewFriendViewController: UIViewController {
         ByUserNameTableViewCellConfigurator(item: Cell(text: "By Username", image: "signature")),
         ByPhoneNumberCellConfigurator(item: Cell(text: "By Phone Number", image: "phone.connection"))
     ]
+    private let contacts: [CellConfigurator] = [
+        ContactsTableViewCellConfigurator(item: User.users[0]),
+        ContactsTableViewCellConfigurator(item: User.users[0]),
+        ContactsTableViewCellConfigurator(item: User.users[0])
+    ]
     
-    private let contacts: [CellConfigurator] = [ContactsTableViewCellConfigurator(item: User.users[0]),
-                                                ContactsTableViewCellConfigurator(item: User.users[0]),
-                                                ContactsTableViewCellConfigurator(item: User.users[0])
-                                                ]
-    
-    let addNewContactsLabel : UILabel = {
-        let label = UILabel()
-        label.text = "Add New Contacts".locolized()
-        label.textColor = UIColor().tableViewColor
-        label.font = UIFont.boldSystemFont(ofSize: 22)
-        label.textAlignment = .left
-        return label
-    }()
-    
-    let addNewContactTableView : UITableView = {
+    let myTableView : UITableView = {
         let tebleView = UITableView()
         return tebleView
     }()
     
-    let youMightKnowThem : UILabel = {
-        let label = UILabel()
-        label.text = "You Might Know Them".locolized()
-        label.textColor = UIColor().tableViewColor
-        label.font = UIFont.boldSystemFont(ofSize: 22)
-        return label
-    }()
-    
-    let contactsTableView: UITableView = {
-        let tableView = UITableView()
-        tableView.largeContentTitle = "Undeme"
-        return tableView
-    }()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        addNewContactTableView.dataSource = self
-        contactsTableView.dataSource = self
+        myTableView.dataSource = self
+        myTableView.delegate = self
         configureView()
         setupNavigationItem()
         setupConstrainst()
@@ -58,8 +35,8 @@ class AddNewFriendViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        addNewContactTableView.estimatedRowHeight = 100
-        addNewContactTableView.rowHeight = UITableView.automaticDimension
+        myTableView.estimatedRowHeight = 100
+        myTableView.rowHeight = UITableView.automaticDimension
     }
     
     private func setupNavigationItem() {
@@ -80,31 +57,13 @@ class AddNewFriendViewController: UIViewController {
     
     private func configureView() {
         view.backgroundColor = .systemBackground
-        view.addSubviews(addNewContactsLabel, addNewContactTableView, youMightKnowThem, contactsTableView)
-        addNewContactTableView.separatorStyle = .none
-        contactsTableView.separatorStyle = .none
+        view.addSubviews(myTableView)
+        myTableView.separatorStyle = .none
     }
     
     private func setupConstrainst() {
-        addNewContactsLabel.snp.makeConstraints { make in
-            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(15.67)
-            make.leading.equalToSuperview().offset(16)
-            make.trailing.equalToSuperview().offset(16)
-        }
-        addNewContactTableView.snp.makeConstraints { make in
-            make.top.equalTo(addNewContactsLabel.snp.bottom).offset(6)
-            make.leading.equalToSuperview().offset(16)
-            make.trailing.equalToSuperview().offset(-16)
-            make.height.equalTo(116)
-        }
-        youMightKnowThem.snp.makeConstraints { make in
-            make.top.equalTo(addNewContactTableView.snp.bottom).offset(24)
-            make.leading.equalToSuperview().offset(16)
-            make.trailing.equalToSuperview().offset(-16)
-            make.height.equalTo(28)
-        }
-        contactsTableView.snp.makeConstraints { make in
-            make.top.equalTo(youMightKnowThem.snp.bottom).offset(6)
+        myTableView.snp.makeConstraints { make in
+            make.top.equalToSuperview()
             make.leading.equalToSuperview().offset(16)
             make.trailing.equalToSuperview().offset(-16)
             make.bottom.equalToSuperview()
@@ -112,27 +71,46 @@ class AddNewFriendViewController: UIViewController {
     }
 }
 
-extension AddNewFriendViewController : UITableViewDataSource {
+extension AddNewFriendViewController : UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items.count
+        if section == 0 {
+            return items.count
+        }
+        return contacts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if tableView == addNewContactTableView {
-            let item = items[indexPath.row]
-            tableView.register(type(of: item).cellClass, forCellReuseIdentifier: type(of: item).reuseId)
-            let cell = tableView.dequeueReusableCell(withIdentifier: type(of: item).reuseId, for: indexPath)
-            item.configure(cell: cell)
-            return cell
+        let item: CellConfigurator
+        if indexPath.section == 0{
+            item = items[indexPath.row]
+        } else {
+            item = contacts[indexPath.row]
         }
-        if tableView == contactsTableView {
-            let item = contacts[indexPath.row]
-            tableView.register(type(of: item).cellClass, forCellReuseIdentifier: type(of: item).reuseId)
-            let cell = tableView.dequeueReusableCell(withIdentifier: type(of: item).reuseId, for: indexPath)
-            item.configure(cell: cell)
-            return cell
+        tableView.register(type(of: item).cellClass, forCellReuseIdentifier: type(of: item).reuseId)
+        let cell = tableView.dequeueReusableCell(withIdentifier: type(of: item).reuseId, for: indexPath)
+        item.configure(cell: cell)
+        return cell
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if section == 0 {
+            return "Add New contacts".locolized()
         }
-        return UITableViewCell()
-        
+        return "You Might Know Them".locolized()
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let myLabel = UILabel()
+        myLabel.frame = CGRect(x: 0, y: -6, width: 320, height: 28)
+        myLabel.font = UIFont.boldSystemFont(ofSize: 22)
+        myLabel.textColor = UIColor().tableViewColor
+        myLabel.text = self.tableView(tableView, titleForHeaderInSection: section)
+        let headerView = UIView()
+        headerView.addSubview(myLabel)
+        return headerView
     }
 }
