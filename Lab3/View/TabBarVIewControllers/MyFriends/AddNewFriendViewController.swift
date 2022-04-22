@@ -9,7 +9,7 @@ import UIKit
 
 class AddNewFriendViewController: UIViewController {
     private let items: [CellConfigurator] = [
-        FromContactsTableViewCellConfigurator(item: Cell(text: "From Contacts ", image: "book")),
+        FromContactsTableViewCellConfigurator(item: Cell(text: "From Contacts", image: "book")),
         ByUserNameTableViewCellConfigurator(item: Cell(text: "By Username", image: "signature")),
         ByPhoneNumberCellConfigurator(item: Cell(text: "By Phone Number", image: "phone.connection"))
     ]
@@ -98,7 +98,7 @@ extension AddNewFriendViewController : UITableViewDataSource, UITableViewDelegat
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if section == 0 {
-            return "Add New contacts".locolized()
+            return "Add New Contacts".locolized()
         }
         return "You Might Know Them".locolized()
     }

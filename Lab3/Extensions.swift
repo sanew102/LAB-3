@@ -96,6 +96,16 @@ extension UIColor {
             }
         }
     }
+    var buttonBackGroundColor: UIColor {
+        return UIColor { (trait) -> UIColor in
+            switch trait.userInterfaceStyle {
+            case .dark:
+                return UIColor(red: 120/255, green: 120/255, blue: 128/255, alpha: 0.35)
+            default:
+                return .white
+            }
+        }
+    }
     
 }
 

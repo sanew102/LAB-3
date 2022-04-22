@@ -11,6 +11,7 @@ typealias ContactsTableViewCellConfigurator = TableCellConfigurator<ContactsTabl
 class ContactsTableViewCell: UITableViewCell, ConfigurableCell {
     typealias DataType = User
     var viewModel = ViewModel()
+    var isMyFriend = true
     private let profileImage : UIImageView = {
         let profileImage = UIImageView()
         profileImage.layer.cornerRadius = 24
@@ -70,15 +71,17 @@ class ContactsTableViewCell: UITableViewCell, ConfigurableCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: .default, reuseIdentifier: reuseIdentifier)
         contentView.addSubviews(profileImage, stackLabel, statusView, addButton)
-        addButton.addTarget(nil, action: #selector(viewModel.addButtonPressed), for: .touchUpInside)
+        addButton.addTarget(nil, action: #selector(addButtonPressed), for: .touchUpInside)
         setupConstraints()
+        bindViewModel()
     }
-
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
     func configure(data: User) {
+        isMyFriend = data.isMyFriend
         profileImage.image = data.profileImage
         userNameLabel.text = data.userName
         followersLabel.text = "\(data.numberOfFriends)"
@@ -89,11 +92,28 @@ class ContactsTableViewCell: UITableViewCell, ConfigurableCell {
         }
     }
     
+    @objc private func addButtonPressed() {
+        viewModel.addButtonPressed(isMyFriend: isMyFriend)
+        isMyFriend = !isMyFriend
+    }
+    
     func bindViewModel() {
-        viewModel.color.bind { color in
+        viewModel.titleText.bind { titleText in
             DispatchQueue.main.async {
-                self.addButton.backgroundColor = color
+                self.addButton.setTitle(titleText, for: .normal)
             }
+        }
+        viewModel.titleColor.bind { titleColor in
+            self.addButton.setTitleColor(titleColor, for: .normal)
+        }
+        viewModel.backgroundColor.bind { backgroundColor in
+            self.addButton.backgroundColor = backgroundColor
+        }
+        viewModel.image.bind { image in
+            self.addButton.setImage(image, for: .normal)
+        }
+        viewModel.borderColor.bind { borderColor in
+            self.addButton.layer.borderColor = borderColor
         }
     }
     
